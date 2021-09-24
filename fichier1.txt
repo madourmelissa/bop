@@ -1,19 +1,14 @@
-#include <stdio.h>
-int main() {
-    int n, i;
-    unsigned long long fact = 1;
-    printf("Enter an integer: ");
-    scanf("%d", &n);
+# Python Program to find the factors of a number
 
-    // shows error if the user enters a negative integer
-    if (n < 0)
-        printf("Error! Factorial of a negative number doesn't exist.");
-    else {
-        for (i = 1; i <= n; ++i) {
-            fact *= i;
-        }
-        printf("Factorial of %d = %llu", n, fact);
-    }
+# This function computes the factor of the argument passed
+def print_factors(x):
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
 
-    return 0;
-}
+num = 320
+
+print_factors(num)
+
+print("End of the program")
